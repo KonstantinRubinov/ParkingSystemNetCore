@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ParkingSystemCore</RootNamespace>
+    <AssemblyName>ParkingSystemCore</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\001-DataAccessLayer\001-DataAccessLayer.csproj" />
+    <ProjectReference Include="..\002-BusinessLogicLayer\002-BusinessLogicLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.5" />
+  </ItemGroup>
+
+
+</Project>
