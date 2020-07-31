@@ -104,12 +104,7 @@ namespace ParkingSystemCore
 			try
 			{
 				int i = facultyRepository.DeleteFaculty(facultyCode);
-				if (i > 0)
-				{
-					return NoContent();
-				}
-				return StatusCode(StatusCodes.Status500InternalServerError);
-
+				return NoContent();
 			}
 			catch (Exception ex)
 			{

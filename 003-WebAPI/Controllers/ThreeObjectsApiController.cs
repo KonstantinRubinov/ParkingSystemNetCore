@@ -106,12 +106,7 @@ namespace ParkingSystemCore
 			try
 			{
 				int i = threeObjectsRepository.DeleteThreeObjects(personId);
-				if (i > 0)
-				{
-					return NoContent();
-				}
-				return StatusCode(StatusCodes.Status500InternalServerError);
-
+				return NoContent();
 			}
 			catch (Exception ex)
 			{

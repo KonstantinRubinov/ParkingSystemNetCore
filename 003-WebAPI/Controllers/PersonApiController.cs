@@ -36,7 +36,6 @@ namespace ParkingSystemCore
 			}
 		}
 
-
 		[HttpGet("persons/id")]
 		public IActionResult GetAllPersonsId()
 		{
@@ -52,20 +51,13 @@ namespace ParkingSystemCore
 			}
 		}
 
-
-
 		[HttpDelete("persons/{personId}")]
 		public IActionResult DeletePerson(string personId)
 		{
 			try
 			{
 				int i = personRepository.DeletePerson(personId);
-				if (i > 0)
-				{
-					return NoContent();
-				}
-				return StatusCode(StatusCodes.Status500InternalServerError);
-
+				return NoContent();
 			}
 			catch (Exception ex)
 			{

@@ -104,12 +104,7 @@ namespace ParkingSystemCore
 			try
 			{
 				int i = cellphoneRepository.DeleteCellphone(beforeCellphone);
-				if (i > 0)
-				{
-					return NoContent();
-				}
-				return StatusCode(StatusCodes.Status500InternalServerError);
-
+				return NoContent();
 			}
 			catch (Exception ex)
 			{

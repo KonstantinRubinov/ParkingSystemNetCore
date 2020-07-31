@@ -119,12 +119,7 @@ namespace ParkingSystemCore
 			try
 			{
 				int i = vehicleRepository.DeleteVehicleByNumber(vehicleNumber);
-				if (i > 0)
-				{
-					return NoContent();
-				}
-				return StatusCode(StatusCodes.Status500InternalServerError);
-
+				return NoContent();
 			}
 			catch (Exception ex)
 			{
